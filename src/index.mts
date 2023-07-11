@@ -41,7 +41,8 @@ async function queryAI(prompt: string): Promise<any> {
   const prompt =
     "The documents contain the following information: " +
     allDocsContent +
-    "\n\n";
+    "\n\n" +
+    "Please list the users and the date in those logs";
   const response = await queryAI(prompt);
 
   console.log(response.message);
